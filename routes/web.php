@@ -50,3 +50,6 @@ Route::get('/register', function (){
 });
 
 Route::post('/user/register', array('uses'=>'UserRegistration@Registration'));
+
+Route::get('/cookie/set', 'CookieController@setCookie');
+Route::get('/cookie/get', 'CookieController@getCookie');
