@@ -28,3 +28,17 @@ Route::get('terminate', [
     'middleware' => 'terminate',
     'uses' => 'ABCController@index',
 ]);
+
+Route::get('/usercontroller/path', [
+    'middleware' => 'First',
+    'uses' => 'UserController@showPath'
+]);
+
+Route::resource('my', 'MyController');
+
+//Route::controller('test','ImplicitController');
+
+class MyClass{
+    public $foo = 'bar';
+}
+Route::get('/myclass','ImplicitController@index');
