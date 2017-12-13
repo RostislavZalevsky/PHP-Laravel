@@ -53,3 +53,16 @@ Route::post('/user/register', array('uses'=>'UserRegistration@Registration'));
 
 Route::get('/cookie/set', 'CookieController@setCookie');
 Route::get('/cookie/get', 'CookieController@getCookie');
+
+Route::get('/header',function(){
+    return response("Hello!", 200)->header('Content-Type', 'text/html');
+});
+
+Route::get('/cookie',function(){
+    return response("Hello", 200)->header('Content-Type', 'text/html')
+        ->withcookie('name','Virat Gandhi');
+});
+
+Route::get('json',function(){
+    return response()->json(['name' => 'Virat Gandhi', 'state' => 'Gujarat']);
+});
