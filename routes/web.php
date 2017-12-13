@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/user/{name?}',function($name = 'User'){
+    echo "Name: ".$name;
+});
+
+Route::get('role', [
+    'middleware' => 'Role:editor',
+    'uses' => 'TestController@index',
+]);
+
+Route::get('terminate', [
+    'middleware' => 'terminate',
+    'uses' => 'ABCController@index',
+]);
