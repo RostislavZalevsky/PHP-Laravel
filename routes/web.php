@@ -46,7 +46,7 @@ Route::get('/myclass','ImplicitController@index');
 Route::get('/foo/bar','UriController@index');
 
 Route::get('/register', function (){
-   return view('register');
+    return view('register');
 });
 
 Route::post('/user/register', array('uses'=>'UserRegistration@Registration'));
@@ -60,15 +60,15 @@ Route::get('/header',function(){
 
 Route::get('/cookie',function(){
     return response("Hello", 200)->header('Content-Type', 'text/html')
-        ->withcookie('name','Virat Gandhi');
+        ->withcookie('name','Rostislav Zalevsky');
 });
 
 Route::get('json',function(){
-    return response()->json(['name' => 'Virat Gandhi', 'state' => 'Gujarat']);
+    return response()->json(['name' => 'Rostislav Zalevsky', 'state' => 'Gujarat']);
 });
 
 Route::get('/test', function (){
-    return view('test',['name'=>'Virat Gandhi']);
+    return view('test',['name'=>'Rostislav Zalevsky']);
 });
 
 Route::get('/test2', function (){
@@ -80,5 +80,5 @@ Route::get('/test3', function (){
 });
 
 Route::get('blade', function () {
-    return view('page',array('name' => 'Virat Gandhi'));
+    return view('page',array('name' => 'Rostislav Zalevsky'));
 });
