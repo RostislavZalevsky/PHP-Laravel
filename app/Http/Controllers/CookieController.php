@@ -11,7 +11,7 @@ class CookieController extends Controller
     {
         $minates = 1;
         $response = new Response('Hello world');
-        $response->withCookie(cookie('name', 'Rostislav', $minates));
+        $response->withCookie(cookie('name', 'virat', $minates));
         return $response;
     }
 
